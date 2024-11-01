@@ -5,17 +5,21 @@ using System.Threading;
 
 public partial class SerialRead : Node2D
 {
-	private string portName = "COM8";
+
+	private string portName;
 	private int baudRate = 9600;
 	private SerialPort serialPort;
 	private Thread serialThread;
 	private bool isRunning = true;
+	private string[] portList = SerialPort.GetPortNames();
+	private int portIndex = 0;
 
 	// Variável para armazenar os dados lidos
 	private string receivedData = "";
 
 	public override void _Ready()
 	{
+		portName = portList[portIndex];
 		ConnectToSerial();
 	}
 
@@ -42,7 +46,9 @@ public partial class SerialRead : Node2D
 		catch (Exception ex)
 		{
 			GD.Print("Erro ao conectar: " + ex.Message);
+			portName = portList[portIndex];
 		}
+	  }
 	}
 
 	private void ReadSerial()
@@ -54,11 +60,15 @@ public partial class SerialRead : Node2D
 				if (serialPort.BytesToRead > 0)
 				{
 					receivedData = serialPort.ReadExisting();
+				} else {
+					serialPort.Close();
+					
 				}
+
 				Thread.Sleep(100); // Evita o uso excessivo da CPU
 			}
 			catch (Exception ex)
-			{
+			{	
 				GD.Print("Erro ao ler dados: " + ex.Message);
 
 			}
