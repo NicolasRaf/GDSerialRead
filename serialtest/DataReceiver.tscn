@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://drw4wukqdn2d0"]
+
+[ext_resource type="Script" path="res://scripts/DataReceiver.gd" id="1_iqo5q"]
+
+[node name="DataReceiver" type="Node"]
+process_mode = 3
+script = ExtResource("1_iqo5q")
