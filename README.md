@@ -19,6 +19,7 @@ A plugin for serial data reading in Godot Engine 4.3, aimed at bridging communic
 
 - [**Godot Engine - .NET**](https://godotengine.org/download/windows/) 4.3 or higher.
 - [SDK do .NET 8](https://dotnet.microsoft.com/pt-br/download) version usade in project.
-  
+- Build System.IO.Ports in project paste: ```dotnet add package System.IO.Ports```
+
   
 ## Installation
