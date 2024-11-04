@@ -43,7 +43,7 @@ public partial class SerialRead : Node
 	public string receivedData = "";
 
 	// Maximum time in milliseconds to wait for data after opening a connection.
-	private const int connectionTimeout = 3000;
+	private const int connectionTimeout = 1000;
 
 	/// <summary>
 	/// Called when the node enters the scene tree for the first time. Initializes the
@@ -185,8 +185,8 @@ public partial class SerialRead : Node
 		if (!serialPort.IsOpen && tryConnect)
 		{	
 			tryConnect = false; // Reset the reconnection flag.
-			GD.Print("Trying to reconnect in 2 seconds");
-			await ToSignal(GetTree().CreateTimer(2.0f), "timeout"); // Wait for 2 seconds before reconnecting.
+			GD.Print("Trying to reconnect in 1 second");
+			await ToSignal(GetTree().CreateTimer(1.0f), "timeout"); // Wait for 2 seconds before reconnecting.
 			ConnectToSerial(); // Attempt to reconnect.
 		}
 
