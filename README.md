@@ -10,18 +10,18 @@ A plugin for serial data reading in Godot Engine 4.3, aimed at bridging communic
 - [Examples](#examples)
 - [Credits](#credits)
 
-## About the Project
+## [About the Project](#about-the-project)
 
 `GDSerialRead` offers a straightforward solution for reading serial data directly in Godot, making it ideal for integrating external devices like Arduino with the engine. This project was initially developed to simulate and capture data from an Arduino Esplora in a Linux environment, enabling real-world hardware and software interactions in a game environment.
 
-## Requirements
+## [Requirements](#requirements)
 
 - [**Godot Engine - .NET**](https://godotengine.org/download/windows/) 4.3 or higher.
 - [SDK do .NET 8](https://dotnet.microsoft.com/pt-br/download) version usade in project.
 - Build System.IO.Ports in project paste: ```dotnet add package System.IO.Ports```
 
   
-## Installation
+## [Installation](#installation)
 
 ### 1. In the project editor in godot initialize the environment for C# following the path below: 
 ```
@@ -79,7 +79,7 @@ dotnet add package System.IO.Ports
     <img src="https://i.imgur.com/ZFhmXih_d.webp?maxwidth=760&fidelity=grand" alt="Descrição da imagem" width="800"/>
 </div>
 
-## Usage
+## [Usage](#usage)
 
 The node `DataReceiver` is responsible for receiving and processing the data sent from the `SerialRead` node. To utilize this functionality, ensure that both this scene (`DataReceiver.gd`) and the `SerialRead.cs` script are set as Global (Autoload) in your project.
 
@@ -102,9 +102,9 @@ The node `DataReceiver` is responsible for receiving and processing the data sen
 This functionality only works if both this node and the `SerialRead.cs` script are configured as Autoloads in your project settings.
 
 
-## Exemple
+## [Exemple](#exemple)
 * Switch to the `example/TestSerialExample` branch. 
-* It has a project already installed for testing the reception of serial data.
+* It has a project already installed for testing the reception of serial data.  
 
-## Credits
+## [Credits](#credits)
 #### This program was developed by [Nícolas Rafael](https://github.com/NicolasRaf) 
