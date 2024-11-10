@@ -8,7 +8,7 @@ A plugin for serial data reading in Godot Engine 4.3, aimed at bridging communic
 - [Installation](#installation)
 - [Usage](#usage)
 - [Examples](#examples)
-- [License](#license)
+- [Credits](#credits)
 
 ## About the Project
 
@@ -100,3 +100,13 @@ The node `DataReceiver` is responsible for receiving and processing the data sen
 
 ### Note:
 This functionality only works if both this node and the `SerialRead.cs` script are configured as Autoloads in your project settings.
+
+
+## Exemple
+Clone the repository and switch to the “example/TestSerialExample” branch. It has a project already installed for testing the reception of serial data.
+``
+https://github.com/NicolasRaf/GDSerialRead/tree/example/TestSerialExample?tab=readme-ov-file
+``
+
+## Credits
+#### This program was developed by [Nícolas Rafael](https://github.com/NicolasRaf) 
