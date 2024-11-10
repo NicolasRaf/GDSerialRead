@@ -103,11 +103,8 @@ This functionality only works if both this node and the `SerialRead.cs` script a
 
 
 ## Exemple
-Switch to the “example/TestSerialExample” branch. 
-It has a project already installed for testing the reception of serial data.
-``
-https://github.com/NicolasRaf/GDSerialRead/tree/example/TestSerialExample?tab=readme-ov-file
-``
+* Switch to the `example/TestSerialExample` branch. 
+* It has a project already installed for testing the reception of serial data.
 
 ## Credits
 #### This program was developed by [Nícolas Rafael](https://github.com/NicolasRaf) 
